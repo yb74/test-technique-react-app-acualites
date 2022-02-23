@@ -1,13 +1,25 @@
+import { Routes ,Route } from 'react-router-dom';
+
 import './App.css';
 
+import HomePage from "./components/HomePage";
+import Header from "./components/Header/Header";
+import Tabs from "./components/Tabs";
+import ArticleDetails from "./components/ArticleDetails";
+
 function App() {
-  return (
-    <div className="App">
-        <h1 className="text-3xl text-red-400 font-bold underline">
-            Hello world!
-        </h1>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            {/*<Tabs />*/}
+            {/* A <Switch> looks through its children <Route>s and
+    renders the first one that matches the current URL. */}
+            <Routes>
+                <Route exact path='/' element={<HomePage/>} />
+                <Route path="/article-details/:id" element={<ArticleDetails/>} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
