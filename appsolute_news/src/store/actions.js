@@ -2,7 +2,6 @@ export const LOADING = 'LOADING';
 export const NEWS_LIST = 'NEWS_LIST';
 export const SINGLE_NEWS_DETAILS = 'SINGLE_NEWS_DETAILS';
 export const ERROR = 'ERROR';
-// export const RESET = "RESET";
 
 export const setNewsList = (newsListArr) => dispatch => {
     dispatch({

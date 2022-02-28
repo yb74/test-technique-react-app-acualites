@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import Header from "./components/Header/Header";
 import Tabs from "./components/Tabs";
 import ArticleDetails from "./components/ArticleDetails";
+import NotFound from "./components/NotFound";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Routes>
                 <Route exact path='/' element={<HomePage/>} />
                 <Route path="/article-details/:id" element={<ArticleDetails/>} />
+                <Route path='*' element={<NotFound/>} />
             </Routes>
         </div>
     );
